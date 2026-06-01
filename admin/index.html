@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - SiBoncel</title>
+
+    <link rel="stylesheet" href="/admin/css/layout.css">
+    <link rel="stylesheet" href="/admin/css/dashboard.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+                <div class="brand-text">
+                    <h2>Si<span style="color: #EEBB57;">Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </div>
+            <button class="btn-close" id="closeSidebar">
+                <iconify-icon icon="material-symbols:close-rounded"></iconify-icon>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/admin/index.html" class="nav-link active">
+                <iconify-icon icon="lucide:layout-dashboard"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <iconify-icon icon="fa6-solid:box"></iconify-icon>
+                <span>Produk & Stok</span>
+            </a>
+
+            <a href="#" class="nav-link">
+                <iconify-icon icon="fa-solid:list-alt"></iconify-icon>
+                <span>Manajemen Pesanan</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/auth/login.html" class="nav-link logout">
+                <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+                <span>Keluar</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="dashboard-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="btn-icon" id="menuToggle">
+                    <iconify-icon icon="charm:menu-hamburger"></iconify-icon>
+                </button>
+            </div>
+
+            <div class="topbar-right">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <a href="/profile/profile.html">
+                            <img src="/images/admin.png" alt="Admin">
+                        </a>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Mr.Admin</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <div class="welcome-section">
+                <h1>Dashboard Penjualan</h1>
+                <p>Selamat datang, Admin! Berikut ringkasan hari ini.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="card-title">PENDAPATAN HARI INI</span>
+                    <h2>Rp 26.000</h2>
+                    <span class="card-footer status-green">+ 12% dari kemarin</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="card-title">TOTAL PESANAN</span>
+                    <h2>1</h2>
+                    <span class="card-footer status-green">+ 5 pesanan baru</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="card-title">PRODUK AKTIF</span>
+                    <h2>12</h2>
+                    <span class="card-footer status-red">+ 3 stok menipis</span>
+                </div>
+
+                <div class="stat-card pickup-card">
+                    <div>
+                        <span class="card-title">PICKUP MENUNGGU</span>
+                        <h2>0</h2>
+                        <span class="card-footer status-green">perlu diproses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-block chart-block">
+                <h3>Penjualan 7 Hari Terakhir</h3>
+                <div class="chart-container">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-block table-block">
+                <div class="table-header">
+                    <h3>Pesanan Terbaru</h3>
+                    <a href="#" class="btn-view-all">Lihat Semua</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">ID PESANAN</th>
+                                <th style="width: 45%;">PELANGGAN</th>
+                                <th style="width: 15%; text-align: center;">TOTAL</th>
+                                <th style="width: 15%; text-align: center;">METODE</th>
+                                <th style="width: 5%; text-align: center;">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-id">IPF-MPU1K80B</td>
+                                <td class="text-customer">Budi Santoso</td>
+                                <td class="text-total">Rp 7.500</td>
+                                <td class="text-method">
+                                    <span class="icon-wrapper">🏪</span> Pickup
+                                </td>
+                                <td><span class="status-badge badge-pickup">Menunggu Pickup</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-id">IPF-MPT940QA</td>
+                                <td class="text-customer">Budi Santoso</td>
+                                <td class="text-total">Rp 26.000</td>
+                                <td class="text-method">
+                                    <span class="icon-wrapper">🚚</span> Kirim
+                                </td>
+                                <td><span class="status-badge badge-process">Diproses</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/admin/js/layout.js"></script>
+    <script src="/admin/js/dashboard.js"></script>
+</body>
+
+</html>

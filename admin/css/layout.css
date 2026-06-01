@@ -1,0 +1,266 @@
+body {
+    background-color: #F5F7FA;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: #1A3A2A;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 15px hsla(0, 0%, 0%, 0.05);
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    z-index: 1000;
+    display: none;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+.sidebar-header {
+    padding: 30px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: hsl(0, 0%, 40%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-logo {
+    background-color: #FDF9F0;
+    color: #2D6A4F;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.content-body {
+    margin: 5px;
+}
+
+.brand-text h2 {
+    font-size: 1.2rem;
+    color: #FDF9F0;
+    margin: 0;
+}
+
+.brand-text p {
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #AFBAB5;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-link iconify-icon {
+    font-size: 1.4rem;
+}
+
+.nav-link.active {
+    background-color: #365244;
+    color: #ffff;
+}
+
+.nav-link:hover:not(.active) {
+    background-color: #2C493B;
+}
+
+.sidebar-footer {
+    padding: 20px 15px;
+    border-top: 1px solid #365244;
+}
+
+.nav-link.logout {
+    color: #ffff;
+}
+
+.topbar {
+    background-color: #FDF9F0;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.05);
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: hsl(0, 0%, 20%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-right iconify-icon {
+    color: hsl(214, 67%, 33%);
+}
+
+.user-avatar img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid hsl(0, 0%, 87%);
+}
+
+.content-body {
+    padding: 25px 20px;
+}
+
+.welcome-section h1 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsl(0, 0%, 0%);
+    margin: 0;
+    font-weight: normal;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    color: hsl(0, 0%, 40%);
+    margin-top: 5px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-info {
+    display: none;
+    text-align: left;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 0%);
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 0.7rem;
+    color: hsl(0, 0%, 50%);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-wrapper {
+        margin-left: 280px;
+        transition: margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body.sidebar-hide .sidebar {
+        transform: translateX(-100%);
+    }
+
+    body.sidebar-hide .dashboard-wrapper {
+        margin-left: 0;
+    }
+
+    .sidebar-footer {
+        flex-shrink: 0;
+        margin-top: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #menuToggle {
+        display: none;
+        margin-right: 15px;
+    }
+
+    .user-info {
+        display: flex;
+    }
+
+    .btn-close,
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
