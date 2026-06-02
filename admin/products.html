@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - SiBoncel</title>
+
+    <link rel="stylesheet" href="/admin/css/layout.css">
+    <link rel="stylesheet" href="/admin/css/products.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+                <div class="brand-text">
+                    <h2>Si<span style="color: #EEBB57;">Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </div>
+            <button class="btn-close" id="closeSidebar">
+                <iconify-icon icon="material-symbols:close-rounded"></iconify-icon>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/admin/index.html" class="nav-link">
+                <iconify-icon icon="lucide:layout-dashboard"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/admin/products.html" class="nav-link active">
+                <iconify-icon icon="fa6-solid:box"></iconify-icon>
+                <span>Produk & Stok</span>
+            </a>
+
+            <a href="/admin/order.html" class="nav-link">
+                <iconify-icon icon="fa-solid:list-alt"></iconify-icon>
+                <span>Manajemen Pesanan</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/auth/login.html" class="nav-link logout">
+                <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+                <span>Keluar</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="dashboard-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="btn-icon" id="menuToggle">
+                    <iconify-icon icon="charm:menu-hamburger"></iconify-icon>
+                </button>
+            </div>
+
+            <div class="topbar-right">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <a href="/profile/profile.html">
+                            <img src="/images/admin.png" alt="Admin">
+                        </a>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Mr.Admin</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <div class="welcome-section">
+                <h1>Manajemen Produk</h1>
+                <p>Kelola stock, harga, dan klasifikasi produk</p>
+            </div>
+
+            <div class="action-bar">
+                <div class="search-wrapper">
+                    <iconify-icon icon="lucide:search" class="search-icon"></iconify-icon>
+                    <input type="text" placeholder="Cari produk..." class="search-input">
+                </div>
+
+                <div class="filter-actions">
+                    <div class="select-wrapper">
+                        <select class="filter-select">
+                            <option value="semua">Semua Kategori</option>
+                            <option value="buah">Buah</option>
+                            <option value="sayur">Sayur</option>
+                            <option value="bahan-pokok">Bahan Pokok</option>
+                        </select>
+                        <iconify-icon icon="lucide:chevron-down" class="select-arrow"></iconify-icon>
+                    </div>
+
+                    <button class="btn-add-product">
+                        <iconify-icon icon="lucide:plus"></iconify-icon>
+                        <span>Tambah Produk</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.alodokter.com/dk0z4ums3/image/upload/v1740381622/attached_image/apel-malang-kandungan-nutrisi-dan-manfaatnya-bagi-tubuh-0-alodokter.jpg"
+                            alt="Apel Malang" class="product-image">
+                    </div>
+
+                    <div class="card-info">
+                        <div class="title-row">
+                            <h3 class="product-title">Apel Malang</h3>
+                            <span class="badge badge-grade-a">Grade A</span>
+                        </div>
+
+                        <p class="product-category">Buah</p>
+
+                        <p class="product-description">
+                            Apel Malang Grade A, segar dan renyah, dipetik langsung dari kebun di Malang dan siap
+                            dikonsumsi.
+                        </p>
+
+                        <div class="details-row">
+                            <span class="product-stock">Stok: 200 kg</span>
+
+                            <div class="price-wrapper">
+                                <span class="old-price">Rp 12.000/kg</span>
+                                <span class="product-price">Rp 9.800/kg</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-action btn-edit">
+                                <iconify-icon icon="lucide:edit-3"></iconify-icon>
+                                Edit
+                            </button>
+
+                            <button class="btn-action btn-delete">
+                                <iconify-icon icon="lucide:trash-2"></iconify-icon>
+                                Hapus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://img-cdn.medkomtek.com/vbBjE13qMSdKejsvJpT9D1E35Q0=/730x411/smart/filters:quality(100):format(webp)/article/b_GHHMrmCZUVSlmB0UlcM/original/065679300_1551778172-Kenali-Manfaat-Brokoli-untuk-Asam-Urat-By-S_derevianko-Shutterstock.jpg"
+                            alt="Brokoli" class="product-image">
+                    </div>
+                    <div class="card-info">
+                        <div class="title-row">
+                            <h3 class="product-title">Brokoli</h3>
+                            <span class="badge badge-grade-b">Grade B</span>
+                        </div>
+
+                        <p class="product-category">Sayur</p>
+
+                        <p class="product-description">
+                            Brokoli segar kaya vitamin dan serat, cocok untuk tumisan,
+                            sup, maupun menu sehat sehari-hari.
+                        </p>
+
+                        <div class="details-row">
+                            <span class="product-stock">Stok: 200 kg</span>
+
+                            <div class="price-wrapper">
+                                <span class="old-price">Rp 12.500/kg</span>
+                                <span class="product-price">Rp 9.800/kg</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-action btn-edit">
+                                <iconify-icon icon="lucide:edit-3"></iconify-icon>
+                                Edit
+                            </button>
+                            <button class="btn-action btn-delete">
+                                <iconify-icon icon="lucide:trash-2"></iconify-icon>
+                                Hapus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.alodokter.com/dk0z4ums3/image/upload/v1740444111/attached_image/pisang-mas-inilah-kandungan-nutrisi-dan-manfaatnya-bagi-kesehatan-0-alodokter.jpg"
+                            alt="Pisang" class="product-image">
+                    </div>
+                    <div class="card-info">
+                        <div class="title-row">
+                            <h3 class="product-title">Pisang</h3>
+                            <span class="badge badge-grade-c">Grade C</span>
+                        </div>
+
+                        <p class="product-category">Buah</p>
+
+                        <p class="product-description">
+                            Pisang matang berkualitas dengan rasa manis alami,
+                            cocok untuk camilan maupun olahan makanan.
+                        </p>
+
+                        <div class="details-row">
+                            <span class="product-stock">Stok: 200 kg</span>
+
+                            <div class="price-wrapper">
+                                <span class="old-price">Rp 11.500/kg</span>
+                                <span class="product-price">Rp 9.800/kg</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-action btn-edit">
+                                <iconify-icon icon="lucide:edit-3"></iconify-icon>
+                                Edit
+                            </button>
+                            <button class="btn-action btn-delete">
+                                <iconify-icon icon="lucide:trash-2"></iconify-icon>
+                                Hapus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://asset.kompas.com/crops/q11Wk13uM61CC8ML3YsVC2gmt9M=/63x63:3906x2625/1200x800/data/photo/2021/03/26/605d24f2c3c08.jpg"
+                            alt="Bawang Merah" class="product-image">
+                    </div>
+                    <div class="card-info">
+                        <div class="title-row">
+                            <h3 class="product-title">Bawang Merah</h3>
+                            <span class="badge badge-grade-b">Grade B</span>
+                        </div>
+
+                        <p class="product-category">Bahan Pokok</p>
+
+                        <p class="product-description">
+                            Bawang merah pilihan dengan aroma kuat dan kualitas baik,
+                            siap digunakan untuk berbagai masakan.
+                        </p>
+
+                        <div class="details-row">
+                            <span class="product-stock">Stok: 200 kg</span>
+
+                            <div class="price-wrapper">
+                                <span class="old-price">Rp 14.000/kg</span>
+                                <span class="product-price">Rp 9.800/kg</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-action btn-edit">
+                                <iconify-icon icon="lucide:edit-3"></iconify-icon>
+                                Edit
+                            </button>
+                            <button class="btn-action btn-delete">
+                                <iconify-icon icon="lucide:trash-2"></iconify-icon>
+                                Hapus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="card-image-wrapper">
+                        <img src="https://asset.kompas.com/crops/FQ-3LCmjuDdhl6CZFZkspBK37pA=/192x131:1728x1155/1200x800/data/photo/2021/04/27/6087a4049dd6c.jpg"
+                            alt="Bawang Putih" class="product-image">
+                    </div>
+                    <div class="card-info">
+                        <div class="title-row">
+                            <h3 class="product-title">Bawang Putih</h3>
+                            <span class="badge badge-grade-a">Grade A</span>
+                        </div>
+
+                        <p class="product-category">Bahan Pokok</p>
+
+                        <p class="product-description">
+                            Bawang putih grade A dengan ukuran besar dan kualitas premium,
+                            cocok untuk kebutuhan dapur harian.
+                        </p>
+
+                        <div class="details-row">
+                            <span class="product-stock">Stok: 200 kg</span>
+
+                            <div class="price-wrapper">
+                                <span class="old-price">Rp 15.000/kg</span>
+                                <span class="product-price">Rp 9.800/kg</span>
+                            </div>
+                        </div>
+
+                        <div class="card-actions">
+                            <button class="btn-action btn-edit">
+                                <iconify-icon icon="lucide:edit-3"></iconify-icon>
+                                Edit
+                            </button>
+                            <button class="btn-action btn-delete">
+                                <iconify-icon icon="lucide:trash-2"></iconify-icon>
+                                Hapus
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- modal tambah -->
+    <div class="modal-overlay" id="productModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Tambah Produk Baru</h2>
+
+                <button class="close-modal" id="closeModal">
+                    <iconify-icon icon="lucide:x"></iconify-icon>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-section">
+                    <h3>Informasi Produk</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Nama Produk</label>
+                            <input type="text" placeholder="Masukkan nama produk">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Kategori</label>
+                            <select>
+                                <option>Buah</option>
+                                <option>Sayur</option>
+                                <option>Bahan Pokok</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Grade</label>
+                            <select>
+                                <option>Grade A</option>
+                                <option>Grade B</option>
+                                <option>Grade C</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Satuan</label>
+                            <select>
+                                <option>kg</option>
+                                <option>gram</option>
+                                <option>pcs</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Stok Tersedia</label>
+                            <input type="number" placeholder="Masukkan stok">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Harga & Diskon</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Harga Normal</label>
+                            <input type="number" id="hargaNormal">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Diskon (%)</label>
+                            <input type="number" id="diskon">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" style="padding-top: 10px;">
+                        <label>Harga Setelah Diskon</label>
+                        <input type="text" id="hargaDiskon" readonly>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Media Produk</h3>
+
+                    <label class="upload-box">
+
+                        <input type="file" hidden>
+
+                        <iconify-icon icon="lucide:image-plus"></iconify-icon>
+
+                        <span>Klik untuk upload gambar</span>
+
+                        <small>PNG, JPG maksimal 5MB</small>
+
+                    </label>
+                </div>
+
+                <div class="form-section">
+                    <h3>Deskripsi Produk</h3>
+
+                    <div class="form-group">
+                        <textarea placeholder="Masukkan deskripsi produk..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn-cancel" id="cancelModal">
+                    Batal
+                </button>
+
+                <button type="submit" class="btn-save">
+                    Simpan Produk
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL EDIT PRODUK -->
+    <div class="modal-overlay" id="editProductModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Edit Produk</h2>
+
+                <button class="close-modal" id="closeEditModal">
+                    <iconify-icon icon="lucide:x"></iconify-icon>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="form-section">
+                    <h3>Informasi Produk</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Nama Produk</label>
+                            <input type="text" id="editNamaProduk">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Kategori</label>
+                            <select id="editKategori">
+                                <option>Buah</option>
+                                <option>Sayur</option>
+                                <option>Bahan Pokok</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Grade</label>
+                            <select id="editGrade">
+                                <option>Grade A</option>
+                                <option>Grade B</option>
+                                <option>Grade C</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Satuan</label>
+                            <select id="editSatuan">
+                                <option>kg</option>
+                                <option>gram</option>
+                                <option>pcs</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label>Stok Tersedia</label>
+                            <input type="number" id="editStok">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Harga & Diskon</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Harga Normal</label>
+                            <input type="number" id="editHargaNormal">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Diskon (%)</label>
+                            <input type="number" id="editDiskon">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" style="padding-top: 10px;">
+                        <label>Harga Setelah Diskon</label>
+                        <input type="text" id="editHargaDiskon" readonly>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Media Produk</h3>
+
+                    <label class="upload-box">
+
+                        <input type="file" hidden>
+
+                        <iconify-icon icon="lucide:image-plus"></iconify-icon>
+
+                        <span>Ganti gambar produk</span>
+
+                        <small>PNG, JPG maksimal 5MB</small>
+
+                    </label>
+                </div>
+
+                <div class="form-section">
+                    <h3>Deskripsi Produk</h3>
+
+                    <div class="form-group">
+                        <textarea rows="5" id="editDeskripsi" placeholder="Masukkan deskripsi produk..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn-cancel" id="cancelEditModal">
+                    Batal
+                </button>
+
+                <button type="submit" class="btn-save">
+                    Simpan Perubahan
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/admin/js/layout.js"></script>
+    <script src="/admin/js/products.js"></script>
+</body>
+
+</html>
