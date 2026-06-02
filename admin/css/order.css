@@ -1,0 +1,180 @@
+.action-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.filter-actions {
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    font-size: 18px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #fff;
+    color: #8c8c8c;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #8c8c8c;
+}
+
+.orders-card {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+.orders-table thead {
+    background: #f7f7f7;
+}
+
+.orders-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8c8c8c;
+}
+
+.orders-table td {
+    padding: 16px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.idPesanan{
+    color: #8c8c8c;
+}
+
+.price {
+    color: #2f855a;
+    font-weight: 600;
+}
+
+.status {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.status-diproses {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-dikirim {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-selesai {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-menunggu-pickup {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-siap-pickup {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.status-selesai-pickup {
+    background: #dcfce7;
+    color: #166534;
+}
+
+@media (min-width: 768px) {
+    .action-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .search-wrapper {
+        width: 320px;
+    }
+
+    .filter-actions {
+        width: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .action-bar {
+        gap: 8px;
+    }
+
+    .search-wrapper {
+        width: 300px;
+        flex: none;
+    }
+
+    .filter-actions {
+        width: 220px;
+        flex: none;
+    }
+
+    .search-input {
+        width: 300px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 18px 20px;
+    }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - SiBoncel</title>
+
+    <link rel="stylesheet" href="/admin/css/layout.css">
+    <link rel="stylesheet" href="/admin/css/order.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+                <div class="brand-text">
+                    <h2>Si<span style="color: #EEBB57;">Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </div>
+            <button class="btn-close" id="closeSidebar">
+                <iconify-icon icon="material-symbols:close-rounded"></iconify-icon>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/admin/index.html" class="nav-link">
+                <iconify-icon icon="lucide:layout-dashboard"></iconify-icon>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/admin/products.html" class="nav-link">
+                <iconify-icon icon="fa6-solid:box"></iconify-icon>
+                <span>Produk & Stok</span>
+            </a>
+
+            <a href="/admin/order.html" class="nav-link active">
+                <iconify-icon icon="fa-solid:list-alt"></iconify-icon>
+                <span>Manajemen Pesanan</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="/auth/login.html" class="nav-link logout">
+                <iconify-icon icon="solar:logout-3-broken"></iconify-icon>
+                <span>Keluar</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="dashboard-wrapper">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="btn-icon" id="menuToggle">
+                    <iconify-icon icon="charm:menu-hamburger"></iconify-icon>
+                </button>
+            </div>
+
+            <div class="topbar-right">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <a href="/profile/profile.html">
+                            <img src="/images/admin.png" alt="Admin">
+                        </a>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Mr.Admin</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-body">
+            <div class="welcome-section">
+                <h1>Manajemen Pesanan</h1>
+                <p>Monitor dan kelola semua pesanan masuk.</p>
+            </div>
+
+            <div class="action-bar">
+                <div class="search-wrapper">
+                    <iconify-icon icon="lucide:search" class="search-icon"></iconify-icon>
+                    <input type="text" placeholder="Cari produk..." class="search-input">
+                </div>
+
+                <div class="filter-actions">
+                    <div class="select-wrapper">
+                        <select class="filter-select">
+                            <option value="semua">Semua Kategori</option>
+                            <option value="buah">Buah</option>
+                            <option value="sayur">Sayur</option>
+                            <option value="bahan-pokok">Bahan Pokok</option>
+                        </select>
+                        <iconify-icon icon="lucide:chevron-down" class="select-arrow"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orders-card">
+
+                <table class="orders-table">
+
+                    <thead>
+                        <tr>
+                            <th>ID PESANAN</th>
+                            <th>PELANGGAN</th>
+                            <th>TOTAL</th>
+                            <th>METODE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="idPesanan">SBC-MPT940QA</td>
+                            <td>Budi Santoso</td>
+
+                            <td class="price">
+                                Rp 20.000
+                            </td>
+
+                            <td>
+                                🚚 Kirim
+                            </td>
+
+                            <td>
+                                <select class="status status-process">
+                                    <option>Diproses</option>
+                                    <option selected>Dikirim</option>
+                                    <option>Selesai</option>
+                                    <option>Menunggu Pickup</option>
+                                    <option>Siap Pickup</option>
+                                    <option>Selesai Pickup</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="idPesanan">SBC-MPT940QA</td>
+                            <td>Budi Santoso</td>
+
+                            <td class="price">
+                                Rp 20.000
+                            </td>
+
+                            <td>
+                                🏪 Pickup
+                            </td>
+
+                            <td>
+                                <select class="status status-done">
+                                    <option>Diproses</option>
+                                    <option>Dikirim</option>
+                                    <option>Selesai</option>
+                                    <option selected>Menunggu Pickup</option>
+                                    <option>Siap Pickup</option>
+                                    <option>Selesai Pickup</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="/admin/js/layout.js"></script>
+    <script src="/admin/js/order.js"></script>
+</body>
+
+</html>
