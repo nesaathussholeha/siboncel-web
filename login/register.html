@@ -7,7 +7,7 @@
     </head>
 
     <body class="register-body">
-        <div class="regiter-container">
+        <div class="register-container">
             <div class="register-box">
                 <h1>Buat Akun Baru</h1>
 
@@ -42,9 +42,36 @@
                             <label>Konfirmasi Password</label>
                             <input type="password" required>
                         </div>
+
+                        <div class="role-section">
+                            <label class="role-tittle">Daftar sebagai</label>
+                            <div class="role-options">
+                                <label class="role-card">
+                                    <input type="radio" name="role" value="pelanggan" checked>
+                                    <div class="card-content">
+                                        <span class="radio-custom"></span>
+                                        <div class="role-text">
+                                            <strong>Pelanggan</strong>
+                                            <p>Belanja produk segar</p>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <label class="role-card">
+                                    <input type="radio" name="role" value="admin">
+                                    <div class="card-content">
+                                        <span class="radio-custom"></span>
+                                        <div class="role-text">
+                                            <strong>Admin/Mitra</strong>
+                                            <p>Kelola toko & produk</p>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <button type="submit">Masuk</button>
+                    <button type="submit">Buat akun</button>
 
                     <p class="register-text">
                             Sudah punya akun?
