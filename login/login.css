@@ -242,9 +242,9 @@ button:hover {
 }
 
 .role-options {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px; 
+  gap: 20px; 
   width: 100%;
 }
 
@@ -252,6 +252,8 @@ button:hover {
   cursor: pointer;
   position: relative;
   width: 100%;
+  flex: 1;
+  min-width: 0;
 }
 
 .role-card input[type="radio"] {
@@ -389,8 +391,12 @@ button:hover {
     width: 100%;
   }
 
-  .role-selection {
+  .role-section {
     grid-column: span 1;
+  }
+
+  .role-card {
+    width: 100%;
   }
 
   .role-options {
