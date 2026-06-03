@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pesanan - SiBoncel</title>
+
+    <link rel="stylesheet" href="./css/pesanan.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+
+                <div class="brand-text">
+                    <h2>Si<span>Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a class="active" href="pesanan.html">Pesanan</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="cart-btn">
+                    <iconify-icon icon="solar:cart-3-outline"></iconify-icon>
+                </button>
+                <button class="profile-btn">
+                    <iconify-icon icon="mdi:account-outline"></iconify-icon>
+                    Naura
+                </button>
+                <button class="logout-btn">
+                    Keluar
+                </button>
+            </div>
+        </nav>
+
+        <section class="hero">
+
+            <h1>Pesanan Kamu 📦</h1>
+
+            <p>
+                Pantau status pesanan dan nikmati produk segar yang segera sampai ke rumahmu.
+            </p>
+
+        </section>
+
+        <section class="empty-order">
+
+            <iconify-icon icon="solar:cart-large-2-outline" class="empty-icon">
+            </iconify-icon>
+
+            <h3>Belum ada pesanan</h3>
+
+            <button class="shop-btn" id="shopNow">
+                Mulai Belanja
+            </button>
+
+        </section>
+
+    </div>
+
+    <script src="./js/pesanan.js"></script>
+
+</body>
+
+</html>

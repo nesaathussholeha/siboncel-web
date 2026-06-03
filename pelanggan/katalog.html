@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog - SiBoncel</title>
+
+    <link rel="stylesheet" href="./css/katalog.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+
+                <div class="brand-text">
+                    <h2>Si<span>Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a class="active" href="katalog.html">Katalog</a></li>
+                <li><a href="pesanan.html">Pesanan</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="profil.html">Profil</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="cart-btn">
+                    <iconify-icon icon="solar:cart-3-outline"></iconify-icon>
+                </button>
+                <button class="profile-btn">
+                    <iconify-icon icon="mdi:account-outline"></iconify-icon>
+                    Naura
+                </button>
+                <button class="logout-btn">
+                    Keluar
+                </button>
+            </div>
+        </nav>
+
+        <section class="hero">
+
+            <h1>Selamat Datang di SiBoncel! 🍎</h1>
+
+            <p>
+                Belanja lebih hemat, konsumsi lebih bijak, dan bantu selamatkan
+                pangan untuk masa depan yang lebih baik.
+            </p>
+
+            <section class="filter-section">
+
+                <div class="search-box">
+                    <iconify-icon icon="mdi:magnify"></iconify-icon>
+                    <input type="text" id="searchInput" placeholder="Cari produk...">
+                </div>
+
+                <div class="categories">
+                    <button class="category active">Semua</button>
+                    <button class="category">Buah</button>
+                    <button class="category">Sayur</button>
+                    <button class="category">Bahan Pokok</button>
+                    <button class="category">Umbi & Rempah</button>
+                </div>
+
+            </section>
+
+            <section class="product-grid">
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 25%</span>
+                        <img src="../images/apel.png" alt="Apel Malang">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Apel Malang</h3>
+                        <p class="product-desc">
+                            Warna kulit sedikit berbintik namun daging buah segar dan manis.
+                        </p>
+
+                        <div class="old-price">Rp28.000/kg</div>
+                        <div class="price">Rp21.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 34%</span>
+                        <img src="../images/jeruk.png" alt="Jeruk Medan">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-a">GRADE A</span>
+                        <h3 class="product-name">Jeruk Medan</h3>
+                        <p class="product-desc">
+                            Jeruk manis dengan ukuran tidak seragam namun kaya vitamin.
+                        </p>
+
+                        <div class="old-price">Rp25.000/kg</div>
+                        <div class="price">Rp16.500/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 20%</span>
+                        <img src="../images/pisang.png" alt="Pisang Cavendish">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-a">GRADE A</span>
+                        <h3 class="product-name">Pisang Cavendish</h3>
+                        <p class="product-desc">
+                            Pisang matang sempurna dengan bercak alami pada kulit.
+                        </p>
+
+                        <div class="old-price">Rp22.000/kg</div>
+                        <div class="price">Rp17.600/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 30%</span>
+                        <img src="../images/mangga.png" alt="Mangga Arumanis">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Mangga Arumanis</h3>
+                        <p class="product-desc">
+                            Mangga harum dengan bentuk tidak simetris namun tetap segar.
+                        </p>
+
+                        <div class="old-price">Rp30.000/kg</div>
+                        <div class="price">Rp21.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 35%</span>
+                        <img src="../images/pir.png" alt="Pir Lokal">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-c">GRADE C</span>
+                        <h3 class="product-name">Pir Lokal</h3>
+                        <p class="product-desc">
+                            Pir dengan bentuk unik dan warna tidak merata.
+                        </p>
+
+                        <div class="old-price">Rp24.000/kg</div>
+                        <div class="price">Rp15.600/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Buah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 22%</span>
+                        <img src="../images/alpukat.png" alt="Alpukat Mentega">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Alpukat Mentega</h3>
+                        <p class="product-desc">
+                            Alpukat berdaging tebal dengan kulit bercak alami.
+                        </p>
+
+                        <div class="old-price">Rp27.000/kg</div>
+                        <div class="price">Rp21.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Sayur">
+                    <div class="product-image">
+                        <span class="discount">Diskon 15%</span>
+                        <img src="../images/tomat.png" alt="Tomat Merah">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-a">GRADE A</span>
+                        <h3 class="product-name">Tomat Merah</h3>
+                        <p class="product-desc">
+                            Tomat segar dengan sedikit goresan alami.
+                        </p>
+
+                        <div class="old-price">Rp20.000/kg</div>
+                        <div class="price">Rp17.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Sayur">
+                    <div class="product-image">
+                        <span class="discount">Diskon 25%</span>
+                        <img src="../images/wortel.png" alt="Wortel Lokal">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Wortel Lokal</h3>
+                        <p class="product-desc">
+                            Wortel bercabang namun tetap renyah dan bergizi.
+                        </p>
+
+                        <div class="old-price">Rp18.000/kg</div>
+                        <div class="price">Rp13.500/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Bahan Pokok">
+                    <div class="product-image">
+                        <span class="discount">Diskon 30%</span>
+                        <img src="../images/kentang.png" alt="Kentang Dieng">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Kentang Dieng</h3>
+                        <p class="product-desc">
+                            Kentang dengan ukuran tidak seragam namun cocok untuk masakan.
+                        </p>
+
+                        <div class="old-price">Rp19.000/kg</div>
+                        <div class="price">Rp13.300/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Bahan Pokok">
+                    <div class="product-image">
+                        <span class="discount">Diskon 28%</span>
+                        <img src="../images/bamer.png" alt="Bawang Merah">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Bawang Merah</h3>
+                        <p class="product-desc">
+                            Bawang berkualitas dengan kulit sedikit kusam.
+                        </p>
+
+                        <div class="old-price">Rp32.000/kg</div>
+                        <div class="price">Rp23.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Sayur">
+                    <div class="product-image">
+                        <span class="discount">Diskon 40%</span>
+                        <img src="../images/cabai.png" alt="Cabai Merah Keriting">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-c">GRADE C</span>
+                        <h3 class="product-name">Cabai Merah Keriting</h3>
+                        <p class="product-desc">
+                            Cabai dengan bentuk melengkung namun tetap pedas maksimal.
+                        </p>
+
+                        <div class="old-price">Rp35.000/kg</div>
+                        <div class="price">Rp21.000/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Umbi & Rempah">
+                    <div class="product-image">
+                        <span class="discount">Diskon 20%</span>
+                        <img src="../images/jahe.png" alt="Jahe">
+                    </div>
+
+                    <div class="product-content">
+                        <span class="grade grade-b">GRADE B</span>
+                        <h3 class="product-name">Jahe</h3>
+                        <p class="product-desc">
+                            Jahe dengan bentuk bercabang alami dan aroma kuat.
+                        </p>
+
+                        <div class="old-price">Rp26.000/kg</div>
+                        <div class="price">Rp20.800/kg</div>
+
+                        <div class="card-actions">
+                            <button class="cart">+ Keranjang</button>
+
+                            <button class="favorite">
+                                <iconify-icon icon="mdi:heart-outline"></iconify-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+    </div>
+
+    <script src="./js/katalog.js"></script>
+
+</body>
+
+</html>
