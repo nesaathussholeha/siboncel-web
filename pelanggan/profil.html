@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - SiBoncel</title>
+
+    <link rel="stylesheet" href="./css/profil.css">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <a href="../landingpage/landingpage.html" class="brand">
+                <div class="mini-logo">
+                    <iconify-icon icon="streamline-flex:salad-vegetable-diet-solid"></iconify-icon>
+                </div>
+
+                <div class="brand-text">
+                    <h2>Si<span>Boncel</span></h2>
+                    <p>Solusi Cerdas Food Waste</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="katalog.html">Katalog</a></li>
+                <li><a href="pesanan.html">Pesanan</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a class="active" href="profil.html">Profil</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="cart-btn">
+                    <iconify-icon icon="solar:cart-3-outline"></iconify-icon>
+                </button>
+
+                <button class="profile-btn" onclick="window.location.href='profil.html'">
+                    <iconify-icon icon="mdi:account-outline"></iconify-icon>
+                    Naura
+                </button>
+
+                <button class="logout-btn" onclick="window.location.href='../landingpage/landingpage.html'">
+                    Keluar
+
+                </button>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <h1>Halo, Naura! 👋</h1>
+            <p>
+                Selamat datang di profil akunmu. Kelola data diri,
+                alamat, dan aktivitas belanja di sini.
+            </p>
+        </section>
+
+        <section class="profile-section">
+            <div class="profile-grid">
+                <div class="profile-card">
+
+                    <h2>Informasi Akun</h2>
+
+                    <form id="accountForm">
+
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="fullname" placeholder="Masukkan nama lengkap kamu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email kamu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>No. Handphone</label>
+                            <input type="text" id="phone" placeholder="Masukkan nomor kamu" required>
+                        </div>
+
+                        <div class="form-message" id="accountMessage"></div>
+
+                        <button type="submit" class="btn-save">
+                            Simpan Perubahan
+                        </button>
+                    </form>
+                </div>
+
+                <div class="profile-card">
+
+                    <h2>Alamat Pengiriman</h2>
+
+                    <form id="addressForm">
+
+                        <div class="form-group">
+                            <label>Alamat Lengkap</label>
+
+                            <textarea id="address" placeholder="Masukkan alamat lengkap kamu" required></textarea>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label>Kota</label>
+                                <input type="text" id="city" placeholder="Masukkan kota kamu" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Kode Pos</label>
+                                <input type="text" id="postalCode" placeholder="Masukkan kode pos kamu" required>
+                            </div>
+                        </div>
+
+                        <div class="form-message" id="addressMessage"></div>
+
+                        <button type="submit" class="btn-save">
+                            Simpan Perubahan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/profil.js"></script>
+
+</body>
+
+</html>
