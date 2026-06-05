@@ -10,7 +10,7 @@ if (loginForm) {
 }
 
 // REGISTER
-document.getElementById("loginForm").addEventListener("submit", function(e) {
+document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     const role = document.querySelector('input[name="role"]:checked').value;
